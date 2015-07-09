@@ -23,3 +23,6 @@ RUN mkdir -p /data/db \
 ADD https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz /tmp/
 RUN tar -xvf /tmp/go1.4.2.linux-amd64.tar.gz -C /opt
 RUN ln -s /opt/go/bin/go /usr/local/bin/go 
+
+#Start MongoDB
+ENTRYPOINT ["/usr/bin/mongod"]
