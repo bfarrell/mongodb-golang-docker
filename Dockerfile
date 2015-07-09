@@ -5,7 +5,7 @@ FROM       ubuntu:latest
 MAINTAINER Brendan Farrell <brendan_farrell@bmc.com>
 
 # Update apt-get sources and install curl
-RUN apt-get update && apt-get install -qq curl
+RUN apt-get update && apt-get install -qq curl && apt-get install -qq git-core
 
 # Installation:
 # Import MongoDB public GPG key AND create a MongoDB list file
